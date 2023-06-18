@@ -82,7 +82,7 @@ const EditSurvey = () => {
 
   const updateSurvey = (survey) => {
     axios
-      .put("https://ospbackend-production.up.railway.app/updateSurvey")
+      .put("https://ospbackend-production.up.railway.app/updateSurvey", survey)
     //.put("http://localhost:8080/updateSurvey", survey)
       .then((response) => {
         console.log("Survey updated successfully!");

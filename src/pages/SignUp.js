@@ -20,7 +20,7 @@ const SignUp = () => {
 
   const saveUser = (user) => {
     axios
-      .post("https://ospbackend-production.up.railway.app/saveUser")
+      .post("https://ospbackend-production.up.railway.app/saveUser", user)
     //.post("http://localhost:8080/saveUser", user)
       .then((response) => {
         console.log("User saved successfully!");

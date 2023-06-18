@@ -37,7 +37,7 @@ const CreateSurvey = () => {
 
   const saveSurvey = (survey) => {
     axios
-    .post("https://ospbackend-production.up.railway.app/saveSurvey")
+    .post("https://ospbackend-production.up.railway.app/saveSurvey", survey)
     //.post("http://localhost:8080/saveSurvey", survey)
       .then((response) => {
         console.log("Survey saved successfully!");
