@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import bcrypt from "bcryptjs";
+//import bcrypt from "bcryptjs";
 
 const SignUp = () => {
   const [userName, setUserName] = useState("");
@@ -33,12 +33,12 @@ const SignUp = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const hashedPassowrd = bcrypt.hashSync(userPassword, 10);
+    //const hashedPassowrd = bcrypt.hashSync(userPassword, 10);
 
     const user = {
       userEmailAddress: userEmailAddress,
       userName: userName,
-      userPassword: hashedPassowrd,
+      userPassword: userPassword,
     };
     saveUser(user);
 
