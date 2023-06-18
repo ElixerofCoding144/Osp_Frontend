@@ -12,7 +12,7 @@ const RespondToSurvey = () => {
 
   useEffect(() => {
     axios
-      .get("https://lowesbackendnew-production.up.railway.app/getSurveys")
+      .get("https://ospbackend-production.up.railway.app/getSurveys")
     //.get("http://localhost:8080/getSurveys")
       .then((response) => {
         const data = response.data;
@@ -29,7 +29,7 @@ const RespondToSurvey = () => {
   useEffect(() => {
     if (selectedSurveyID) {
       axios
-        .get("https://lowesbackendnew-production.up.railway.app/getSurvey/${selectedSurveyID}")
+        .get("https://ospbackend-production.up.railway.app/getSurvey/${selectedSurveyID}")
       //.get(`http://localhost:8080/getSurvey/${selectedSurveyID}`)
         .then((response) => {
           const data = response.data;
@@ -56,7 +56,7 @@ const RespondToSurvey = () => {
 
   const saveResponses = (surveyResponses) => {
     axios
-      .post("https://lowesbackendnew-production.up.railway.app/saveResponse")
+      .post("https://ospbackend-production.up.railway.app/saveResponse")
     //.post("http://localhost:8080/saveResponse", surveyResponses)
       .then((response) => {
         console.log("Responses saved successfully!");
