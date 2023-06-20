@@ -29,7 +29,8 @@ const EditSurvey = () => {
   useEffect(() => {
     if (selectedSurveyID)
       axios
-        .get(`https://ospbackend-production.up.railway.app/getSurvey/${selectedSurveyID}`)
+        // .get(`https://ospbackend-production.up.railway.app/getSurvey/${selectedSurveyID}`)
+        .get(`https://ospbackend-production.up.railway.app/getSurvey/2`)
       //.get(`http://localhost:8080/getSurvey/${selectedSurveyID}`)
         .then((response) => {
           const data = response.data;
